@@ -1,0 +1,16 @@
+.cat-info {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+.cat-img {
+  width: 800px;
+  height: 500px;
+}
+.text {
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
