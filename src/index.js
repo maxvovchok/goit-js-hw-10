@@ -54,9 +54,13 @@ function onClickOption() {
   showLoader();
 
   const selectedBreedId = breedSelect.value;
-  fetchCatByBreed(selectedBreedId).then(cat => {
-    renderCat(cat);
-  });
+  fetchCatByBreed(selectedBreedId)
+    .then(cat => {
+      renderCat(cat);
+    })
+    .catch(() => {
+      showError();
+    });
 }
 
 function renderCat({ breedName, description, imageUrl, temperament }) {
